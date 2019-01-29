@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0px;
   padding: 0px;
@@ -29,8 +33,15 @@ p {
   font-family: 'Open Sans', sans-serif;
 }
 
+body {
+  overflow: visible;
+  max-width: 1600px;
+  margin: auto;
+}
+
 .hero {
-  height: 70vh;
+  height: 70%;
+  max-height: 900px;
   font-size: 40px;
   background-image: url(https://latinta.com.ar/wp-content/uploads/2016/09/Spinetta_Web.jpg);
   background-size: cover;
@@ -43,14 +54,64 @@ p {
   padding-left: 5%;
 }
 
-.columna {
+.bloque {
   margin: 0.1%;
   float: left;
   width: 24.8%;
-  height: 24vh;
+  height: 24%;
+  max-height: 450px;
   padding-top: 5%;
   box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
   text-decoration: none;
+  overflow: hidden;
+}
+
+.bloque img {
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+.bloque:hover img {
+ -webkit-transform: scale(1.2);
+ transform: scale(1.2);
+ }
+
+.columna-derecha{
+  width: 70%;
+  float: left;
+}
+
+.columna-izquierda {
+  width: 20%;
+  text-align: center;
+  margin-top: 1%;
+  margin-right: 1%;
+  margin-left: 8%;
+  float: left;
+  position: sticky;
+}
+
+.columna-izquierda img {
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  border-width: 1px;
+  border-style: solid;
+}
+
+.columna-izquierda ul {
+  font-family: 'Teko', sans-serif;
+	font-size: 18px;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.columna-izquierda li {
+  width: 100%;
+  background-color: lightgrey;
+  margin-top: 3px;
+  border-radius: 10px;
 }
 
 .musica {
@@ -75,39 +136,6 @@ p {
   background-image: url(https://video-images.vice.com/articles/5a1858b51e66b64241695076/lede/1511546750893-Captura-de-pantalla-2017-11-24-a-las-120538.png);
   background-size: cover;
   background-position: top;
-}
-
-.menu {
-  float: left;
-  width: 20%;
-  height: 200%;
-  text-align: center;
-  width: 15%;
-  margin-top: 1%;
-  margin-left: 13%;
-  margin-right: 1%;
-}
-
-.menu img {
-  height: 200px;
-  width: 200px;
-  border-radius: 100%;
-  border-width: 1px;
-  border-style: solid;
-}
-
-.menu ul {
-  font-family: 'Teko', sans-serif;
-	font-size: 18px;
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.menu li {
-  width: 100%;
-  background-color: lightgrey;
-  margin-top: 3px;
-  border-radius: 10px;
 }
 
 .contenido {
