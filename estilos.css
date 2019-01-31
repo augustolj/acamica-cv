@@ -11,7 +11,8 @@ body {
 h1 {
   color: white;
   font-family: 'Major Mono Display', monospace;
-  text-shadow: -1px 0 lightgrey, 0 1px lightgrey, 1px 0 lightgrey, 0 -1px lightgrey;
+  text-shadow: -1% 0 lightgrey, 0 1% lightgrey, 1% 0 lightgrey, 0 -1% lightgrey;
+  font-size: 10vh;
 }
 
 h2 {
@@ -19,7 +20,7 @@ h2 {
   color: white;
   font-weight: lighter;
   text-align: center;
-  font-size: 40px;
+  font-size: 6vh;
 }
 
 h3 {
@@ -35,17 +36,15 @@ p {
 
 body {
   overflow: visible;
-  max-width: 1600px;
   margin: auto;
 }
 
-.hero {
+header {
   height: 70%;
-  max-height: 900px;
-  font-size: 40px;
   background-image: url(https://latinta.com.ar/wp-content/uploads/2016/09/Spinetta_Web.jpg);
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 .nombre {
@@ -54,16 +53,25 @@ body {
   padding-left: 5%;
 }
 
-.bloque {
-  margin: 0.1%;
+.envuelve-bloque {
   float: left;
-  width: 24.8%;
-  height: 24%;
-  max-height: 450px;
-  padding-top: 5%;
+  width: 25%;
+  height: 30%;
+  overflow: hidden;
+  position: sticky;
+}
+
+.bloque {
+  height: auto;
+  width: auto;
+  margin: 0.1%;
   box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
   text-decoration: none;
-  overflow: hidden;
+  transition: all 0.5s ease;
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding-top: 10%;
 }
 
 .bloque img {
@@ -72,9 +80,9 @@ body {
  left: 0;
 }
 
-.bloque:hover img {
+.bloque:hover {
  -webkit-transform: scale(1.2);
- transform: scale(1.2);
+ transform: scale(1.1);
  }
 
 .columna-derecha{
@@ -82,7 +90,7 @@ body {
   float: left;
 }
 
-.columna-izquierda {
+nav {
   width: 20%;
   text-align: center;
   margin-top: 1%;
@@ -92,7 +100,7 @@ body {
   position: sticky;
 }
 
-.columna-izquierda img {
+nav img {
   height: 200px;
   width: 200px;
   border-radius: 100%;
@@ -100,14 +108,14 @@ body {
   border-style: solid;
 }
 
-.columna-izquierda ul {
+nav ul {
   font-family: 'Teko', sans-serif;
 	font-size: 18px;
   list-style-type: none;
   padding-left: 0;
 }
 
-.columna-izquierda li {
+nav li {
   width: 100%;
   background-color: lightgrey;
   margin-top: 3px;
@@ -140,7 +148,7 @@ body {
 
 .contenido {
   margin-top: 1%;
-  padding: 1%;
+  padding: 2%;
   float: left;
   width: 60%;
   background-color: white;
